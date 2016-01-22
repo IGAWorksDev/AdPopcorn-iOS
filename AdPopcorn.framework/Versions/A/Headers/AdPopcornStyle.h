@@ -30,6 +30,6 @@ typedef NS_ENUM(NSInteger, AdPopcornThemeColor)
 @property (nonatomic, strong) UIColor *adPopcornCustomRewardCheckThemeColor;
 @property (nonatomic, copy) NSString *adPopcornOfferWallTitle;
 
-+ (AdPopcornStyle *)sharedInstance;
++ (AdPopcornStyle *)shared;
 
 @end

@@ -85,7 +85,6 @@ typedef NS_ENUM(NSInteger, AdPopcornContentsType)
   @discussion
   Native 광고이면서, Igaworks의 reward 지급 서비스를 사용하는 경우, 광고 완료 처리 후, reward 지급 처리 요청을 위해 호출한다.
  
-  @param rewardKey            리워드 식별키
  */
 + (void)tryToGetRewardItemForNativeAd;
 
@@ -196,7 +195,7 @@ typedef NS_ENUM(NSInteger, AdPopcornContentsType)
 
 /*!
   @abstract
-  AdPopcorn video delegate
+  AdPopcorn video mediation delegate
  
   @discussion
  
@@ -205,8 +204,25 @@ typedef NS_ENUM(NSInteger, AdPopcornContentsType)
 
 @optional
 
+
+/*!
+ @abstract
+ video ad network으로부터의 rewardinfo를 전달.
+ 
+ @discussion
+ 
+ @param rewardInfo            AdPopcornContentsType
+ */
 - (void)videoAdsCompleted:(nullable NSDictionary *)rewardInfo;
 
-- (void)videoAdsNotAvailabil;
+
+/*!
+ @abstract
+ video mediation의 모든 network으로부터의 광고가 없을때 호출된다.
+ 
+ @discussion
+ 
+ */
+- (void)videoAdsNotAvailable;
 
 @end

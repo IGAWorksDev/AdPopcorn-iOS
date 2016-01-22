@@ -15,7 +15,7 @@ https://github.com/IGAWorksDev/AdPopcorn-iOS
 LICENSE
 }
 
-s.platform = :ios, '6.0'
+s.platform = :ios, '7.0'
 s.author       = { "wonje,song" => "ricky@igaworks.com" }
 s.source       = { :git => "https://github.com/IGAWorksDev/AdPopcorn-iOS.git", :tag => "#{s.version}" }
 s.resources = "AdPopcorn.bundle"

@@ -124,16 +124,6 @@ typedef NS_ENUM(NSInteger, AdPopcornContentsType)
 - (void)requestFailedWithError:(nonnull NSError *)error;
 
 
-/*!
-  @abstract
-  사용자의 ads action에 의해, App.을 벗어날때 호출된다.
- 
-  @discussion
- 
-  @param error            NSError
- */
-- (void)willLeaveApplicationByAdsAction;
-
 
 @end
 
@@ -161,7 +151,7 @@ typedef NS_ENUM(NSInteger, AdPopcornContentsType)
 
 /*!
   @abstract
-  AdPopcorn ads view가 노출되기 직후에, 호출된다.
+  AdPopcorn ads view가 노출된 직후에, 호출된다.
  
   @discussion
  
@@ -189,6 +179,16 @@ typedef NS_ENUM(NSInteger, AdPopcornContentsType)
  */
 - (void)adPopcornViewDidClose:(AdPopcornContentsType)contentsType;
 
+
+/*!
+ @abstract
+ 사용자의 ads action에 의해, App.을 벗어날때 호출된다.
+ 
+ @discussion
+ 
+ @param error            NSError
+ */
+- (void)willLeaveApplicationByAdsAction;
 
 @end
 
